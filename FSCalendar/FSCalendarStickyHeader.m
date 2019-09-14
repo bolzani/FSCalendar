@@ -98,7 +98,7 @@
     _month = month;
     _calendar.formatter.dateFormat = self.calendar.appearance.headerDateFormat;
     BOOL usesUpperCase = (self.calendar.appearance.caseOptions & 15) == FSCalendarCaseOptionsHeaderUsesUpperCase;
-    BOOL usesCapitalizedCase = (self.calendar.appearance.caseOptions & 15) == FSCalendarCaseOptionsHeaderUsesCapitalizedCase;
+    BOOL usesCapitalizedCase = (self.calendar.appearance.caseOptions & FSCalendarCaseOptionsHeaderUsesCapitalizedCase) == FSCalendarCaseOptionsHeaderUsesCapitalizedCase;
     NSString *text = [_calendar.formatter stringFromDate:_month];
     if (usesUpperCase) {
         text = text.uppercaseString;
